@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGO | 게시판</title>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/boardWriteNotice.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/boardWriteNotice.css">
 </head>
 <body>
     <div id="container">
@@ -88,8 +88,8 @@
 
             <div class="sns">
                 <ul>
-                    <li><a href="#"><img src="../images/sns-1.png"></a></li>
-                    <li><a href="#"><img src="../images/sns-2.png"></a></li>
+                    <li><a href="#"><img src="images/sns-1.png"></a></li>
+                    <li><a href="#"><img src="images/sns-2.png"></a></li>
                 </ul>
             </div>
         </footer>

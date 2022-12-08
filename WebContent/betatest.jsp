@@ -194,8 +194,8 @@
 
             <div class="sns">
                 <ul>
-                    <li><a href="#"><img src="../images/sns-1.png"></a></li>
-                    <li><a href="#"><img src="../images/sns-2.png"></a></li>
+                    <li><a href="#"><img src="images/sns-1.png"></a></li>
+                    <li><a href="#"><img src="images/sns-2.png"></a></li>
                 </ul>
             </div>
         </footer>

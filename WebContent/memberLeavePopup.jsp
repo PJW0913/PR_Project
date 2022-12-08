@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGO | 회원 탈퇴 관리</title>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/memberLeavePopup.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/memberLeavePopup.css">
 </head>
 <body>
     <div class="container">

@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGO | 메인화면</title>
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div id="container">
@@ -94,15 +94,15 @@
                         <!-- 국내증시-->
                         <div id="KS" class="tabContent1">
                             <ul>
-                                <li><img src="../images/kospi.png" alt="코스피지수"></li>
-                                <li><img src="../images/kosdaq.png" alt="코스닥지수"></li>
+                                <li><img src="images/kospi.png" alt="코스피지수"></li>
+                                <li><img src="images/kosdaq.png" alt="코스닥지수"></li>
                             </ul>
                         </div>
                         <!-- 미국증시-->
                         <div id="US" class="tabContent1">
                             <ul>
-                                <li><img src="../images/nasdaq.png" alt="나스닥지수"></li>
-                                <li><img src="../images/DJI.png" alt="다우지수"></li>
+                                <li><img src="images/nasdaq.png" alt="나스닥지수"></li>
+                                <li><img src="images/DJI.png" alt="다우지수"></li>
                             </ul>
                         </div>
                     </div>
@@ -166,8 +166,8 @@
 
             <div class="sns">
                 <ul>
-                    <li><a href="#"><img src="../images/sns-1.png"></a></li>
-                    <li><a href="#"><img src="../images/sns-2.png"></a></li>
+                    <li><a href="#"><img src="images/sns-1.png"></a></li>
+                    <li><a href="#"><img src="images/sns-2.png"></a></li>
                 </ul>
             </div>
         </footer>
