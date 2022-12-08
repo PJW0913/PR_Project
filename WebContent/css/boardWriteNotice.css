@@ -1,0 +1,110 @@
+
+.board {
+    margin-top: 120px;
+    margin-bottom: 5rem;
+}
+
+.board_write {
+    padding-top: 50px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.board_title {
+    font-family: 'LINESeedKR-Bd';
+    margin-bottom: 20px;
+}
+
+.write-wrap {
+    border-top: 2px solid #999;
+    width: 100%;
+}
+
+.write-wrap .title {
+    border-bottom: 2px solid #999;
+    padding: 15px;
+}
+
+.write-wrap .title dl {
+    font-size: 0;
+}
+
+.write-wrap .title dt,
+.write-wrap .title dd {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+
+.write-wrap .title dt {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 20px;
+    width: 94px;
+}
+
+.write-wrap .title dd {
+    width: calc(100% - 100px);
+}
+
+.write-wrap .title dd input[type="text"] {
+    font-family: 'SUIT-Medium';
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.write-wrap .cont {
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+    display: flex;
+}
+.write-wrap .cont .cont-left {
+    width: 100px;
+}
+.write-wrap .cont .cont-left h2 {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 20px;
+    line-height: 550px;
+    padding-left: 15px;
+}
+.write-wrap .cont .cont-right {
+    width: 100%;
+}
+.write-wrap .cont textarea {
+    font-family: 'SUIT-Medium';
+    display: block;
+    width: 97.5%;
+    height: 550px;
+    padding: 15px;
+    margin: 0 15px 15px 15px;
+    box-sizing: border-box;
+    resize: vertical;
+    resize: none;
+}
+
+.bottom-wrap{
+    margin-top: 30px;
+    font-size: 0;
+    text-align: center;
+}
+
+.bottom-wrap a{
+    font-family: 'SUIT-Medium';
+    display: inline-block;
+    min-width: 80px;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.bottom-wrap a:first-child{
+    margin-left: 0;
+}
+
+.bottom-wrap a:hover{
+    border-color: black;
+    background: black;
+    color: #fff;
+}
+

@@ -1,0 +1,161 @@
+body {
+    height: auto;
+}
+.main {
+    width: 80%;
+    height: 900px;
+    margin: 120px auto 0 auto;
+}
+
+.tab {
+    overflow: hidden;
+    padding-top: 1rem;
+}
+.tab button {
+    padding: 1rem 2rem 0.2rem 2rem;
+    background-color: white;
+    font-family: 'LINESeedKR-Bd';
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+}
+.tab button:hover {
+    color: rgb(40, 82, 128);
+}
+.tab button.active {
+    color: rgb(40, 82, 128);
+    border-bottom: 4px solid rgb(40, 82, 128);
+}
+.tabcontent {
+    display: none;
+    padding-top: 2rem;
+}
+
+/* 검색박스 */
+.tabcontent .memberSearchbox {
+    width: 100%;
+    height: 10rem;
+    border-top: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    display: flex;
+}
+.tabcontent .memberSearchbox .memberSearchbox-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.tabcontent .memberSearchbox .memberSearchbox-left table {
+    margin: auto 0;
+}
+.tabcontent .memberSearchbox .memberSearchbox-left table td {
+    height: 3rem;
+}
+.tabcontent .memberSearchbox .memberSearchbox-left table .td1 {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 1.5rem;
+}
+.tabcontent .memberSearchbox .memberSearchbox-left table .td2 {
+    font-family: 'SUIT-Medium';
+    font-size: 1.2rem;
+}
+.tabcontent .memberSearchbox .memberSearchbox-left table select {
+    width: 70%;
+    height: 2rem;
+    font-family: 'SUIT-Medium';
+}
+.tabcontent .memberSearchbox .memberSearchbox-left table input[type="text"] {
+    width: 70%;
+    height: 2rem;
+}
+.tabcontent .memberSearchbox .memberSearchbox-right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+} 
+.tabcontent .memberSearchbox .memberSearchbox-right .btnSearchmember {
+    margin: 3.3rem 1rem 3.3rem 0;
+    padding: 1rem 3rem;
+    font-family: 'LINESeedKR-Bd';
+    cursor: pointer;
+}
+
+/* 회원리스트 표 영역 */
+.tabcontent .list{
+    width: 100%;
+    margin: 2rem 0;
+}
+.tabcontent .list table {
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.tabcontent .list table th {
+    background-color: rgb(229, 229, 229);
+    height: 2.5rem;
+    font-family: 'LINESeedKR-Bd';
+    font-size: 1.1rem;
+}
+.tabcontent .list table .th1 {
+    width: 5rem;
+}
+.tabcontent .list table .th2 {
+    width: 12rem
+}
+.tabcontent .list table td {
+    height: 2.2rem;
+    font-family: 'SUIT-Medium';
+}
+.tabcontent .list table button {
+    font-family: 'SUIT-Medium';
+    padding: 3px 6px;
+    cursor: pointer;
+}
+
+/* 페이징 */
+.paging {
+    text-align: center;
+    /* margin-top: 30px; */
+    font-size: 0;
+}
+
+.paging a {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-left: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 100%;
+
+}
+
+.paging a.bt {
+    font-size: 15px;
+    padding-top: 5px;
+    letter-spacing: -1px;
+    
+}
+
+.paging a.num {
+    padding-top: 5px;
+    font-size: 15px;
+    width: 30px;
+}
+
+.paging a.num:hover {
+    border-color: black;
+    background: black;
+    color: #fff;
+}
+
+.paging a:first-child {
+    border-left: 1px solid #ddd;
+}
+
+
+.tabcontent .list table .return, .tabcontent .list table .unregister{
+    color:gray;
+}

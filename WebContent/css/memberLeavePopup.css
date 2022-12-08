@@ -1,0 +1,60 @@
+body {
+    width: 500px;
+    height: 700px;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+.container .memberInfo-box {
+    width: 100%;
+    height: 2rem;
+}
+.container h2 {
+    margin-bottom: 0.5rem;
+    font-family: 'LINESeedKR-Bd';
+}
+.container .memberInfo-table {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.container table td {
+    font-family: 'SUIT-Medium';
+    height: 2.5rem;
+    text-align: center;
+}
+.container table .td1 {
+    font-family: 'LINESeedKR-Bd';
+    width: 7.5rem;
+    background-color: rgb(229, 229, 229);
+}
+
+.container .memberGrade-table {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+.container table select {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+}
+.container table .td2 {
+    height: 7rem;
+}
+.container .btn-verify {
+    text-align: center;
+}
+.container .btn-verify button {
+    font-family: 'LINESeedKR-Bd';
+    padding: 1rem 3rem;
+}

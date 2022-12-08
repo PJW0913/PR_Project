@@ -1,0 +1,139 @@
+body {
+    height: auto;
+}
+.board {
+    margin-top: 120px;
+    margin-bottom: 5rem;
+}
+
+.board_list {
+    font-family: 'SUIT-Medium';
+    padding-top: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+.board-list h1 {
+    font-family: 'LINESeedKR-Bd';
+}
+
+.board_list_head {
+    margin-top: 1rem;
+}
+
+.board_list_head,
+.board_list_body .item {
+    padding: 10px 0; 
+    font-size: 0; 
+}
+
+.board_list_head{
+    border-top: 2px solid rgb(40, 86, 128);
+    border-bottom: 1px solid #ccc;
+}
+
+.board_list_body .item {    border-bottom: 1px solid #ccc;
+}
+
+.board_list_head div,
+.board_list_body .item div {
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+}
+
+.board_list_head div {
+    font-weight: 600;
+}
+
+.board_list .num {
+    width: 10%;
+}
+
+.board_list .tit {
+    width: 55%;
+}
+
+.board_list .board_list_body div .tit {
+    text-align: left;
+}
+
+.board_list_body div .tit a:hover {
+    text-decoration: underline;
+}
+
+.board_list .writer {
+    width: 10%;
+}
+
+.board_list .date {
+    width: 15%;
+}
+
+.board_list .view {
+    width: 10%;
+}
+
+/* paging */
+
+.paging {
+    font-family: 'SUIT-Medium';
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0;
+}
+
+.paging a {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-left: 0;
+    width: 25px;
+    height: 25px;
+    line-height: 100%;
+    position: relative;
+}
+
+.paging a.bt {
+    /* font-size: 1.2rem; */
+    font-size: 15px;
+    padding-top: 5px;
+    letter-spacing: -1px;
+    
+}
+
+.paging a.num {
+    /* font-size: 1.4rem; */
+    padding-top: 5px;
+    font-size: 15px;
+    width: 30px;
+}
+
+.paging a.num:hover {
+    border-color: black;
+    background: black;
+    color: #fff;
+}
+
+.paging a:first-child {
+    border-left: 1px solid #ddd;
+}
+
+.paging a.bt.write{
+    font-family: 'SUIT-Medium';
+    width: 90px;
+    height: 30px;
+    border-left: 1px solid #ddd;
+    /* float: right; */
+    right: 12rem;
+    padding-top: 7px;
+    position: absolute;
+}
+
+.paging a.bt.write:hover {
+    border-color: black;
+    background: black;
+    color: #fff;
+}
+
+/* 문의사항 */

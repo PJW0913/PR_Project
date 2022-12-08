@@ -1,0 +1,122 @@
+.board {
+    height: 1500px;
+    margin-top: 120px;
+    margin-bottom: 5rem;
+}
+
+.board_wrap {
+    padding-top: 50px;
+    width: 50%;
+    margin: 0 auto;
+}
+.board_wrap .board_title h1 {
+    font-family: 'LINESeedKR-Bd';
+}
+.board_view {
+    width: 100%;
+    border-top: 2px solid black;
+    margin-top: 20px;
+    position: relative;
+}
+.board_view .edit a {
+    font-family: 'SUIT-Medium';
+    text-align: center;
+    display: inline-block;
+    min-width: 80px;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 15px;
+    position: absolute;
+    right: 16px;
+    top: 16px
+}
+.board_view .edit a:hover {
+    border-color: black;
+    background: black;
+    color: #fff;
+}
+.board_view .title{
+    font-family: 'LINESeedKR-Bd';
+    padding: 20px 15px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.board_view .info{
+    font-family: 'SUIT-Medium';
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    font-size: 0;
+}
+
+.board_view .info dl {
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+
+}
+
+.board_view .info dl:first-child {
+    padding-left: 0;
+}
+
+.board_view .info dl::before {
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.board_view .info dl:first-child:before{
+    display: none;
+}
+
+.board_view .info dl dt {
+    display: inline-block;
+    font-size: 15px;
+}
+
+.board_view .info dl dd{
+    display: inline-block;
+    font-size: 15px ;
+    margin-left: 10px;
+    color: #777;
+}
+
+.board_view .cont {
+    font-family: 'SUIT-Medium';
+    padding: 15px;
+    border-bottom: 1px solid #999;
+    line-height: 160%;
+    font-size: 15px;
+    height: 450px;
+}
+
+.bottom-wrap{
+    padding: 30px 0;
+    font-size: 0;
+    text-align: right;
+    /* border-bottom: 1px solid; */
+}
+
+.bottom-wrap a{
+    font-family: 'SUIT-Medium';
+    text-align: center;
+    display: inline-block;
+    min-width: 150px;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid black;
+    font-size: 15px;
+}
+
+.bottom-wrap a:hover{
+    border-color: black;
+    background: black;
+    color: #fff;
+}

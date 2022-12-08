@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUIT-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, li {
+    list-style: none;
+}
+html, body {
+    height: 100%;
+    position: sticky;
+}
+body {
+    margin: 0 auto;
+}
+h3 {
+    font: inherit;
+    /* font-family: AlphaSans,sans-serif!important; */
+}
+#container {
+    width: 100%;
+}

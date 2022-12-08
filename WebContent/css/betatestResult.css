@@ -1,0 +1,71 @@
+#container {
+    width:100%;
+    height: auto;
+}
+.main {
+    margin-top: 120px;
+}
+
+.betatestResult {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+/* 결과 차트 영역 */
+.betatestResult .resultChart {
+    width: 100%;
+    border-right: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.betatestResult .resultChart img {
+    width: 50%;
+    height: 60%;
+    margin-left: 20%;
+}
+
+/* 결과 지수 영역 */
+.betatestResult .resultIndex {
+    width: 100%;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+/* 결과 차트 제목 & 결과 지수 제목 영역*/
+.betatestResult .resultChart .resultChart-title, .betatestResult .resultIndex .resultIndex-title {
+    width: 100%;
+    height: 40px;
+    margin: 1rem 0 1rem 1.5rem;
+}
+.betatestResult .resultIndex .resultIndex-title h2 {
+    font-family: 'LINESeedKR-Bd';
+}
+
+/* 결과 지수 테이블 */
+.betatestResult .resultIndex .resultTable table {
+    width: 100%;
+    margin: 1rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.betatestResult .resultIndex .resultTable table th {
+    background-color: rgb(229, 229, 229);
+}
+.betatestResult .resultIndex .resultTable table td {
+    padding: 0.5rem;
+}
+.betatestResult .resultIndex .resultTable table .alignR {
+    text-align: right;
+}
+
+.main .verify-box {
+    width: 80%;
+    height:100px;
+    margin: 3rem auto;
+    display: block;
+    text-align: center;
+}
+.main .verify-box input[type="button"] {
+    padding: 1rem 5rem;
+    font-family: 'LINESeedKR-Bd';
+    margin-right:5rem;
+    cursor: pointer;
+}

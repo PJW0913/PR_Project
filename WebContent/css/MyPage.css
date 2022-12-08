@@ -1,0 +1,241 @@
+body {
+    height: auto;
+}
+
+.main {
+    margin-top: 120px;
+    height: auto;
+}
+.mypage {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+/* 좌측 */
+.mypage .mypageList {
+    width: 20%;
+    height: 900px;
+    border-right: 1px solid rgb(229, 229, 229);
+    border-left: 1px solid rgb(229, 229, 229);
+    display: flex;
+    flex-direction: column;
+}
+/* 아이콘 및 인사말 영역 */
+.mypage .mypageList .myInfo {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgb(229, 229, 229);
+}
+.mypage .mypageList .myInfo .userIcon {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 2.5rem 0 1rem 0;
+}
+.mypage .mypageList .myInfo .userIcon img {
+    width: 100px;
+    height: 100px;
+}
+.mypage .mypageList .myInfo .userName {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+.mypage .mypageList .myInfo .userName p {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 1.2rem;
+}
+/* 정보제목 */
+.mypage .mypageList .select .infoTitle {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px dotted rgb(229, 229, 229);
+}
+/* 리스트 버튼 */
+.mypage .mypageList .select .tab button {
+    font-family: 'SUIT-Medium';
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding : 15px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.mypage .mypageList .select .tab button:hover {
+    background-color: rgb(229, 229, 229);
+}
+.mypage .mypageList .select .tab button.active {
+    background-color: rgb(229, 229, 229);
+    font-weight: 600;
+}
+/* 자료 제목 */
+.mypage .mypageList .select .dataTitle {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0 1rem 0;
+    border-top: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px dotted rgb(229, 229, 229);
+}
+
+/* 우측 정보출력 */
+.mypage .mypageInfo {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+}
+
+/* 개인정보 */
+.mypage .mypageInfo .tabcontent {
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgb(229, 229, 229);
+}
+.mypage .mypageInfo .tabcontent h1 {
+    font-family: 'LINESeedKR-Bd';
+    padding-bottom: 2rem;
+}
+.mypage .mypageInfo .tabcontent {
+    width: 100%;
+    height: 50px;
+}
+.mypage .mypageInfo .tabcontent .text p{
+    font-family: 'SUIT-Medium';
+    margin-bottom: 3rem;
+}
+.mypage .mypageInfo .tabcontent .pwBox {
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid rgb(229, 229, 229);
+    display: flex;
+    flex-direction: row;
+    line-height: 200px;
+}
+.mypage .mypageInfo .tabcontent .pwBox p {
+    font-family: 'LINESeedKR-Bd';
+    font-size: 2rem;
+    padding: 0 10rem 0 12.5rem;
+}
+.mypage .mypageInfo .tabcontent .pwBox .pwInput input[type="password"] {
+    width: 15rem;
+    height: 2rem;
+}
+.mypage .mypageInfo .tabcontent .btn-verify {
+    text-align: center;
+    margin-top: 2rem;
+}
+.mypage .mypageInfo .tabcontent .btn-verify input[type="button"] {
+    padding: 1rem 5rem;
+    font-family: 'LINESeedKR-Bd';
+}
+
+/* 회원탈퇴 영역 */
+.mypage .mypageInfo .tabcontent .unregisterReasonTitle h2 {
+    font-family: 'LINESeedKR-Bd';
+    padding-bottom: 10px;
+}
+.mypage .mypageInfo .tabcontent .unregisterReasonList  {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid rgb(229, 229, 229);
+}
+.mypage .mypageInfo .tabcontent .unregisterReasonList li {
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-family: 'SUIT-Medium';
+}
+
+.mypage .mypageInfo .tabcontent .unregisterUserInfoTitle h2 {
+    font-family: 'LINESeedKR-Bd';
+    padding-bottom: 10px;
+}
+.mypage .mypageInfo .tabcontent .unregisterUserInfo {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid rgb(229, 229, 229);
+}
+.mypage .mypageInfo .tabcontent .unregisterUserInfo Table .t1 {
+    font-family: 'LINESeedKR-Bd';
+    width: 10rem;
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+.mypage .mypageInfo .tabcontent .unregisterUserInfo Table .t2 {
+    font-family: 'SUIT-Medium';
+    width: 15rem;
+}
+.mypage .mypageInfo .tabcontent .unregisterUserInfo Table .t2 input[type="password"] {
+    width: 15rem;
+    height: 2rem;
+}
+
+/* 저장된 자료 영역 */
+.mypage .mypageInfo .tabcontent .backtestDataTitle h2,
+.mypage .mypageInfo .tabcontent .PredictionDataTitle h2 {
+    font-family: 'LINESeedKR-Bd';
+    padding-bottom: 10px;
+}
+.mypage .mypageInfo .tabcontent .backtestData,
+.mypage .mypageInfo .tabcontent .PredictionData {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-top: 1px solid rgb(229, 229, 229);
+}
+.mypage .mypageInfo .tabcontent .backtestData Table,
+.mypage .mypageInfo .tabcontent .PredictionData Table {
+    margin: 0 auto;
+    text-align: center;
+}
+.mypage .mypageInfo .tabcontent .backtestData Table th,
+.mypage .mypageInfo .tabcontent .PredictionData Table th {
+    font-family: 'LINESeedKR-Bd';
+    background-color: rgb(229, 229, 229);
+    height: 2.5rem;
+}
+.mypage .mypageInfo .tabcontent .backtestData Table .th1,
+.mypage .mypageInfo .tabcontent .PredictionData Table .th1 {
+    width: 5rem;
+}
+.mypage .mypageInfo .tabcontent .backtestData Table .th2,
+.mypage .mypageInfo .tabcontent .PredictionData Table .th2{
+    width: 40rem;
+}
+.mypage .mypageInfo .tabcontent .backtestData Table .th3,
+.mypage .mypageInfo .tabcontent .PredictionData Table .th3{
+    width: 15rem;
+}
+.mypage .mypageInfo .tabcontent .backtestData Table td,
+.mypage .mypageInfo .tabcontent .PredictionData Table td {
+    font-family: 'SUIT-Medium';
+    height: 2.2rem;
+    border-bottom: 1px solid rgb(229, 229, 229);
+    border-right: 1px solid rgb(229, 229, 229);
+}
+.mypage .mypageInfo .tabcontent .backtestData Table td:last-child,
+.mypage .mypageInfo .tabcontent .PredictionData Table td:last-child  {
+    border-right: none;
+}
+
+.mypage .mypageInfo .tabcontent .backtestData Table td a:hover,
+.mypage .mypageInfo .tabcontent .PredictionData Table td a:hover {
+    text-decoration: underline;
+}

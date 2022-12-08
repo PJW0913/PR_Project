@@ -1,0 +1,48 @@
+footer {
+    width: 100%;
+    height: 80px;
+    padding-top:15px;
+    margin-top: 1rem;
+    border-top: 2px solid rgb(229, 229, 229);
+    font-family: 'SUIT-Medium';
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.footerlogo {
+    text-align: center;
+    font-size: 30px;
+    color: gray;
+    line-height: 60px;
+    font-family: 'LINESeedKR-Bd';
+}
+
+.bottomInfo{
+    text-align: center;
+    min-width: 880px;
+}
+.bottomInfo ul {
+    padding-top: 0.5rem;
+}
+.bottomInfo ul li {
+    display: inline;
+    color: gray;
+    padding: 0 20px;
+    border-right:1px solid rgb(180, 180, 180);
+}
+.sns {
+    min-width: 190px;
+}
+.sns ul {
+    text-align: right;
+    padding-right: 3rem;
+    min-width: 120px;
+}
+.sns ul li{
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid rgb(180, 180, 180);
+}
+.sns ul li:last-child {
+    border: none;
+}
