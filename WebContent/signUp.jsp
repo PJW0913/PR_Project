@@ -46,15 +46,18 @@
                     <h1>회원가입</h1>
                     <!-- 회원가입 폼 -->
                     <form action="">
-                        <!-- 이름 -->
-                        <label for="userName">이름</label>
-                        <input type="text" id="userName" required>
+                        <!-- 아이디-->
+                        <label for="userid">아이디</label>
+                        <input type="text" id="userid" required>
                         <!-- 비밀번호 -->
                         <label for="userpw">비밀번호</label>
-                        <input type="password" id="userid" placeholder="6글자이상" required>
+                        <input type="password" id="userpw" placeholder="6글자이상" required>
                         <!-- 비밀번호 확인 -->
                         <label for="confirm_password">비밀번호 확인</label>
                         <input type="password" id="confirm_password" required placeholder="6글자이상">
+                        <!-- 이름-->
+                        <label for="userName">이름</label>
+                        <input type="text" id="userName" required>
                         <!-- 이메일 -->
                         <label for="userEmail">이메일</label>
                         <input type="email" id="userEmail" required>

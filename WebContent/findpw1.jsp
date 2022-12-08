@@ -43,9 +43,9 @@
         <div class="main">
             <div class="box-findpw">
                 <h1>비밀번호 찾기</h1>
-                <h4>비밀번호를 찾고자 하는 사용자 이름을<br> 입력해주세요.</h4>
+                <h4>비밀번호를 찾고자 하는 사용자 아이디를<br> 입력해주세요.</h4>
                 <form action="findpw2.jsp">
-                    <input type="text" name="userName" required placeholder="사용자 이름">
+                    <input type="text" name="userid" required placeholder="사용자 아이디">
                     <button type="submit">다음</button>
                 </form>
                 <p class="p1">비밀번호가 기억나시나요?<a href="login.jsp">로그인화면</a></p>

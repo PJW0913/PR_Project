@@ -45,8 +45,8 @@
                 <h1>LOGIN</h1>
                 <form>
                     <!-- 이름 -->
-                    <label for="userName">이름</label>
-                    <input type="text" id="userName" required placeholder="이름">
+                    <label for="userid">아이디</label>
+                    <input type="text"userid="userName" required placeholder="아이디">
                     <!-- 비밀번호 -->
                     <label for="userpw">비밀번호</label>
                     <input type="password" id="userid" placeholder="비밀번호" required>
