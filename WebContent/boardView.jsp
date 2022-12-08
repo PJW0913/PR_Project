@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/boardViewNotice.css">
+    <link rel="stylesheet" href="css/boardView.css">
 </head>
 <body>
     <div id="container">
