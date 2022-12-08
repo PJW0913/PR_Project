@@ -20,11 +20,11 @@
             <div class="header-box">
                 <!-- 로고 -->
                 <div class="logo-box">
-                    <h1><a href="main.html">LOGO</a></h1>
+                    <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
                 <div class="login-box">
                     <h2><a href="#"></a></h2>
-                    <h2><a href="login.html">로그인</a></h2>
+                    <h2><a href="login.jsp">로그인</a></h2>
                 </div>
             </div><!-- 로고 및 로그인 -->
             <!-- 네비바 -->
@@ -32,9 +32,9 @@
                 <!-- 네비바 박스 -->
                 <div class="nav-bar">
                     <ul>
-                        <li><a href="betatest.html">베타테스트</a></li>
-                        <li><a href="prediction.html">수익성예측</a></li>
-                        <li><a href="board.html">게시판</a></li>
+                        <li><a href="betatest.jsp">베타테스트</a></li>
+                        <li><a href="prediction.jsp">수익성예측</a></li>
+                        <li><a href="board.jsp">게시판</a></li>
                     </ul>
                 </div><!-- 네비바 박스 -->
             </nav><!-- 네비바 -->
@@ -64,8 +64,8 @@
                         </div>
                     </div>
                     <div class="bottom-wrap">
-                        <a href="boardView.html" class="on">수정</a>
-                        <a href="boardView.html">취소</a>
+                        <a href="boardView.jsp" class="on">수정</a>
+                        <a href="boardView.jsp">취소</a>
                     </div>
                 </div>
             </div>

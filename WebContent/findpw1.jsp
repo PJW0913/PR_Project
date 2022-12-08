@@ -20,11 +20,11 @@
             <div class="header-box">
                 <!-- 로고 -->
                 <div class="logo-box">
-                    <h1><a href="main.html">LOGO</a></h1>
+                    <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
                 <div class="login-box">
                     <h2><a href="#"></a></h2>
-                    <h2><a href="login.html">로그인</a></h2>
+                    <h2><a href="login.jsp">로그인</a></h2>
                 </div>
             </div><!-- 로고 및 로그인 -->
             <!-- 네비바 -->
@@ -32,9 +32,9 @@
                 <!-- 네비바 박스 -->
                 <div class="nav-bar">
                     <ul>
-                        <li><a href="betatest.html">베타테스트</a></li>
-                        <li><a href="prediction.html">수익성예측</a></li>
-                        <li><a href="board.html">게시판</a></li>
+                        <li><a href="betatest.jsp">베타테스트</a></li>
+                        <li><a href="prediction.jsp">수익성예측</a></li>
+                        <li><a href="board.jsp">게시판</a></li>
                     </ul>
                 </div><!-- 네비바 박스 -->
             </nav><!-- 네비바 -->
@@ -44,11 +44,11 @@
             <div class="box-findpw">
                 <h1>비밀번호 찾기</h1>
                 <h4>비밀번호를 찾고자 하는 사용자 이름을<br> 입력해주세요.</h4>
-                <form action="findpw2.html">
+                <form action="findpw2.jsp">
                     <input type="text" name="userName" required placeholder="사용자 이름">
                     <button type="submit">다음</button>
                 </form>
-                <p class="p1">비밀번호가 기억나시나요?<a href="login.html">로그인화면</a></p>
+                <p class="p1">비밀번호가 기억나시나요?<a href="login.jsp">로그인화면</a></p>
             </div>
         </div>
 

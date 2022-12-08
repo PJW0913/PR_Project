@@ -20,11 +20,11 @@
             <div class="header-box">
                 <!-- 로고 -->
                 <div class="logo-box">
-                    <h1><a href="main.html">LOGO</a></h1>
+                    <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
                 <div class="login-box">
                     <h2><a href="#"></a></h2>
-                    <h2><a href="login.html">로그인</a></h2>
+                    <h2><a href="login.jsp">로그인</a></h2>
                 </div>
             </div><!-- 로고 및 로그인 -->
             <!-- 네비바 -->
@@ -32,9 +32,9 @@
                 <!-- 네비바 박스 -->
                 <div class="nav-bar">
                     <ul>
-                        <li><a href="betatest.html">베타테스트</a></li>
-                        <li><a href="prediction.html">수익성예측</a></li>
-                        <li><a href="board.html">게시판</a></li>
+                        <li><a href="betatest.jsp">베타테스트</a></li>
+                        <li><a href="prediction.jsp">수익성예측</a></li>
+                        <li><a href="board.jsp">게시판</a></li>
                     </ul>
                 </div><!-- 네비바 박스 -->
             </nav><!-- 네비바 -->
@@ -95,7 +95,7 @@
                             </div>
                         </form>
                         <div class="btn-verify">
-                            <input type="button" value="확인" onclick="location.href='MyPagePersonalInfo.html'">
+                            <input type="button" value="확인" onclick="location.href='MyPagePersonalInfo.jsp'">
                         </div>
                     </div>
                     <div id="unregister" class="tabcontent">
@@ -150,7 +150,7 @@
                             </table>
                         </div>
                         <div class="btn-verify">
-                            <input type="button" value="탈퇴하기" onclick="openLeave(), location.href='main.html'">
+                            <input type="button" value="탈퇴하기" onclick="openLeave(), location.href='main.jsp'">
                         </div>
                     </div>
 
@@ -173,27 +173,27 @@
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td><a href="betatestResult.html">백테스트 결과데이터 - (5)</a></td>
+                                    <td><a href="betatestResult.jsp">백테스트 결과데이터 - (5)</a></td>
                                     <td>2022.12.01</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td><a href="betatestResult.html">백테스트 결과데이터 - (4)</a></td>
+                                    <td><a href="betatestResult.jsp">백테스트 결과데이터 - (4)</a></td>
                                     <td>2022.11.30</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td><a href="betatestResult.html">백테스트 결과데이터 - (3)</a></td>
+                                    <td><a href="betatestResult.jsp">백테스트 결과데이터 - (3)</a></td>
                                     <td>2022.11.28</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td><a href="betatestResult.html">백테스트 결과데이터 - (2)</a></td>
+                                    <td><a href="betatestResult.jsp">백테스트 결과데이터 - (2)</a></td>
                                     <td>2022.11.20</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td><a href="betatestResult.html">백테스트 결과데이터 - (1)</a></td>
+                                    <td><a href="betatestResult.jsp">백테스트 결과데이터 - (1)</a></td>
                                     <td>2022.11.11</td>
                                 </tr>
                             </table>
@@ -211,27 +211,27 @@
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td><a href="predictionResult.html">수익성예측 결과데이터 - (5)</a></td>
+                                    <td><a href="predictionResult.jsp">수익성예측 결과데이터 - (5)</a></td>
                                     <td>2022.12.01</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td><a href="predictionResult.html">수익성예측 결과데이터 - (4)</a></td>
+                                    <td><a href="predictionResult.jsp">수익성예측 결과데이터 - (4)</a></td>
                                     <td>2022.11.30</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td><a href="predictionResult.html">수익성예측 결과데이터 - (3)</a></td>
+                                    <td><a href="predictionResult.jsp">수익성예측 결과데이터 - (3)</a></td>
                                     <td>2022.11.28</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td><a href="predictionResult.html">수익성예측 결과데이터 - (2)</a></td>
+                                    <td><a href="predictionResult.jsp">수익성예측 결과데이터 - (2)</a></td>
                                     <td>2022.11.20</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td><a href="predictionResult.html">수익성예측 결과데이터 - (1)</a></td>
+                                    <td><a href="predictionResult.jsp">수익성예측 결과데이터 - (1)</a></td>
                                     <td>2022.11.11</td>
                                 </tr>
                             </table>

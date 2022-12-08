@@ -20,11 +20,11 @@
             <div class="header-box">
                 <!-- 로고 -->
                 <div class="logo-box">
-                    <h1><a href="main.html">LOGO</a></h1>
+                    <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
                 <div class="login-box">
                     <h2><a href="#"></a></h2>
-                    <h2><a href="login.html">로그인</a></h2>
+                    <h2><a href="login.jsp">로그인</a></h2>
                 </div>
             </div><!-- 로고 및 로그인 -->
             <!-- 네비바 -->
@@ -32,9 +32,9 @@
                 <!-- 네비바 박스 -->
                 <div class="nav-bar">
                     <ul>
-                        <li><a href="betatest.html">베타테스트</a></li>
-                        <li><a href="prediction.html">수익성예측</a></li>
-                        <li><a href="board.html">게시판</a></li>
+                        <li><a href="betatest.jsp">베타테스트</a></li>
+                        <li><a href="prediction.jsp">수익성예측</a></li>
+                        <li><a href="board.jsp">게시판</a></li>
                     </ul>
                 </div><!-- 네비바 박스 -->
             </nav><!-- 네비바 -->
@@ -56,7 +56,7 @@
                         <div class="board_list_body">
                             <div class="item">
                                 <div class="num">1</div>
-                                <div class="tit"><a href="boardViewNotice.html">공지사항내용입니다.</a></div>
+                                <div class="tit"><a href="boardViewNotice.jsp">공지사항내용입니다.</a></div>
                                 <div class="writer">관리자</div>
                                 <div class="date">2019-11-20</div>
                                 <div class="view">111</div>
@@ -100,7 +100,7 @@
                             <a href="#" class="num">5</a>
                             <a href="#" class="bt next">></a>
                             <a href="#" class="bt last">>></a>
-                            <a href="boardWriteNotice.html" class="bt write">글쓰기</a>
+                            <a href="boardWriteNotice.jsp" class="bt write">글쓰기</a>
                         </div>
                     </div>
                     <!-- /공지사항  -->
@@ -120,14 +120,14 @@
                         <div class="board_list_body">
                             <div class="item">
                                 <div class="num">1</div>
-                                <div class="tit"><a href="boardView.html">게시글 제목입니다.</a></div>
+                                <div class="tit"><a href="boardView.jsp">게시글 제목입니다.</a></div>
                                 <div class="writer">사용자 1</div>
                                 <div class="date">2019-11-20</div>
                                 <div class="view">111</div>
                             </div>
                             <div class="item">
                                 <div class="num">2</div>
-                                <div class="tit"><a href="boardView.html">게시글 제목입니다.</a></div>
+                                <div class="tit"><a href="boardView.jsp">게시글 제목입니다.</a></div>
                                 <div class="writer">사용자 2</div>
                                 <div class="date">2019-11-20</div>
                                 <div class="view">111</div>
@@ -199,7 +199,7 @@
                             <a href="#" class="num">5</a>
                             <a href="#" class="bt next">></a>
                             <a href="#" class="bt last">>></a>
-                            <a href="boardWrite.html" class="bt write">글쓰기</a>
+                            <a href="boardWrite.jsp" class="bt write">글쓰기</a>
                         </div>
                     </div>
                     <!-- /문의사항  -->
