@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-test
+
+<%
+	session.invalidate();
+%>
+<script>
+	location.href = 'main.jsp';
+</script>
+
 </body>
 </html>

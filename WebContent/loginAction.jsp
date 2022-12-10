@@ -43,13 +43,13 @@
         <div class="main">
             <div class="box-login">
                 <h1>LOGIN</h1>
-                <form method="post" action="/PR_Project/login.do">
+                <form method="post" action="loginAction.jsp">
                     <!-- 이름 -->
                     <label for="userid">아이디</label>
-                    <input type="text" id="userid" name="userid" required placeholder="아이디">
+                    <input type="text"userid="userName" required placeholder="아이디">
                     <!-- 비밀번호 -->
                     <label for="userpw">비밀번호</label>
-                    <input type="password" id="userpw" name="userpw" placeholder="비밀번호" required>
+                    <input type="password" id="userid" placeholder="비밀번호" required>
                     <button type="submit" >로그인</button>
                 </form>
                 <p class="p1">Not have an account?<a href="signUp.jsp"> 회원가입</a></p>
