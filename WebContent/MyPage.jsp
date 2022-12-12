@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page import="pr.user.model.*" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="css/MyPage.css">
 </head>
 <body>
+<%
+	String userID = null;
+	if (session.getAttribute("userid") != null){
+		userID = (String) session.getAttribute("userid");
+	}
+	
+	UserDto userDto = null;
+	if(session.getAttribute("userDto") != null){
+		userDto = (UserDto) session.getAttribute("userDto");
+	}
+%>
     <div id="container">
     <!-- 헤더(로고 및 로그인, 네비바) -->
         <header>
@@ -22,10 +33,23 @@
                 <div class="logo-box">
                     <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
-                <div class="login-box">
+                <%
+                	if(userID == null) {
+                %>
+                 <div class="login-box">
                     <h2><a href="#"></a></h2>
                     <h2><a href="login.jsp">로그인</a></h2>
                 </div>
+                <% 
+                	} else {
+                %>
+                 <div class="login-box">
+                    <h2><a href="MyPage.jsp">마이페이지</a></h2>
+                    <h2><a href="logoutAction.jsp">로그아웃</a></h2>
+                </div>
+                <%
+                	}
+                %>
             </div><!-- 로고 및 로그인 -->
             <!-- 네비바 -->
             <nav>
@@ -52,7 +76,7 @@
                         </div>
                         <!-- 사용자이름 -->
                         <div class="userName">
-                            <p>ㅇㅇㅇ 님 안녕하세요</p>
+                            <p><%=userID%> 님 안녕하세요</p>
                         </div>
                     </div>
 
@@ -88,14 +112,14 @@
                             <p>· 개인정보 보호를 위해 회원님의 비밀번호를 한번 더 입력해 주세요.</p>
                         </div>
                         <!-- 비밀번호 입력영역 -->
-                        <form class="pwBox">
+                        <form class="pwBox" method="post" action="/PR_Project/myPrivacy.do">
                             <p>비밀번호</p>
                             <div class="pwInput">
-                                <input type="password">
+                                <input type="password" name="userpw">
                             </div>
                         </form>
                         <div class="btn-verify">
-                            <input type="button" value="확인" onclick="location.href='MyPagePersonalInfo.jsp'">
+                            <input type="button" value="확인" >
                         </div>
                     </div>
                     <div id="unregister" class="tabcontent">

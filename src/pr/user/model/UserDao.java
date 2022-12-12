@@ -8,19 +8,18 @@ import java.sql.SQLException;
 
 public class UserDao {
 	
+	// 싱글톤 (Singleton)	
 	private static UserDao userDao = new UserDao();
 			
 	// 생성자는 외부에서 호출 못하게 private으로 지정
 	private UserDao() {
 	}
-	
-	// 싱글톤 (Singleton)		
+		
 	public static UserDao getInstance() {
 		return userDao;
 	}
 	
 	//데이터베이스 멤버변수
-	
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
@@ -82,10 +81,143 @@ public class UserDao {
 		catch(Exception e) {
 			e.printStackTrace();
 		}
+		finally {
+			disconnect();
+		}
 		return -2;  //데이터베이스 오류
 	}
 	
+	//회원가입 메소드
+	public int joinDB(UserDto userDto) {
+		connect();
 		
+		String sql = "Insert into userinfo values (?,?,?,?,?)";
 		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,   userDto.getUserId());
+			pstmt.setString(2,   userDto.getUserPassword());
+			pstmt.setString(3,   userDto.getUserName());
+			pstmt.setString(4,   userDto.getUserEmail());
+			pstmt.setString(5,   userDto.getUserPhone());
+			return pstmt.executeUpdate();    // 성공할시 반드시 0이상 숫자가 반환됨.
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return -1;  // 오류
+	}
+	
+	//회원가입(manager) 메소드
+	public int joinMDB(String userId) {
+		connect();
+		
+		String sql = "Insert into usermanager(usernum,userid) values(userm_seq.nextval,?)";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,   userId);
+			return pstmt.executeUpdate();  
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return -1; //오류
+	}
+		
+	//회원 비밀번호 확인 메소드
+	public int checkpwDB(String userId, String userPw) {
+		connect();
+		
+		String sql = "select userpw from userinfo where userid=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1,   userId);
+			rs = pstmt.executeQuery();
+			//데이터 하나
+			if(rs.next()) {
+				System.out.println(rs.getString("userpw"));
+				if(userPw.equals(rs.getString("userpw"))) {
+					return 1;
+				}
+				rs.close();
+			}
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return 0;
+	}
+	
+	//회원정보 메소드
+	public UserDto getDB(String userId) {
+		connect();
+		
+		String sql = "SELECT * from userinfo where userid=?";
+		UserDto userDto = new UserDto();
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userId);
+			ResultSet rs = pstmt.executeQuery();
+			
+			//데이터 하나만
+			rs.next();
+			userDto.setUserId(rs.getString("userid"));
+			userDto.setUserPassword(rs.getString("userpw"));
+			userDto.setUserName(rs.getString("username"));
+			userDto.setUserEmail(rs.getString("useremail"));
+			userDto.setUserPhone(rs.getString("userphone"));
+			rs.close();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return userDto;
+	}
+	
+	//회원(manager)정보 메소드
+	public UserMDto getMDB(String userId) {
+		connect();
+		
+		String sql = "SELECT * from usermanager where userid=?";
+		UserMDto userMDto = new UserMDto();
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userId);
+			ResultSet rs = pstmt.executeQuery();
+			
+			//데이터 하나만
+			rs.next();
+			userMDto.setUserId(rs.getString("userid"));
+			userMDto.setUserLevel(rs.getString("userlevel"));
+			userMDto.setUserDate(rs.getString("userdate"));
+			userMDto.setUserState(rs.getString("userstate"));
+			rs.close();
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return userMDto;
+	}
+	
+	
 
 }

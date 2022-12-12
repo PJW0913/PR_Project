@@ -13,6 +13,12 @@
     <link rel="stylesheet" href="css/board.css">
 </head>
 <body>
+<%
+	String userID = null;
+	if (session.getAttribute("userid") != null){
+		userID = (String) session.getAttribute("userid");
+	}
+%>
     <div id="container">
     <!-- 헤더(로고 및 로그인, 네비바) -->
         <header>
@@ -22,10 +28,23 @@
                 <div class="logo-box">
                     <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
-                <div class="login-box">
+                <%
+                	if(userID == null) {
+                %>
+                 <div class="login-box">
                     <h2><a href="#"></a></h2>
                     <h2><a href="login.jsp">로그인</a></h2>
                 </div>
+                <% 
+                	} else {
+                %>
+                 <div class="login-box">
+                    <h2><a href="MyPage.jsp">마이페이지</a></h2>
+                    <h2><a href="logoutAction.jsp">로그아웃</a></h2>
+                </div>
+                <%
+                	}
+                %>
             </div><!-- 로고 및 로그인 -->
             <!-- 네비바 -->
             <nav>

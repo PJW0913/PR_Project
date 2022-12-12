@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page import="pr.user.model.*" %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -13,6 +13,23 @@
     <link rel="stylesheet" href="css/MyPagePersonalInfo.css">
 </head>
 <body>
+<%
+	String userID = null;
+	if (session.getAttribute("userid") != null){
+		userID = (String) session.getAttribute("userid");
+	}
+	
+	UserDto userDto = null;
+	if(session.getAttribute("userDto") != null){
+		userDto = (UserDto) session.getAttribute("userDto");
+	}
+	
+	UserMDto userMDto = null;
+	if(session.getAttribute("userMDto") != null){
+		userMDto = (UserMDto) session.getAttribute("userMDto");
+	}
+	
+%>
     <div id="container">
     <!-- 헤더(로고 및 로그인, 네비바) -->
         <header>
@@ -22,23 +39,24 @@
                 <div class="logo-box">
                     <h1><a href="main.jsp">LOGO</a></h1>
                 </div>
-                <div class="login-box">
+                <%
+                	if(userID == null) {
+                %>
+                 <div class="login-box">
                     <h2><a href="#"></a></h2>
                     <h2><a href="login.jsp">로그인</a></h2>
                 </div>
+                <% 
+                	} else {
+                %>
+                 <div class="login-box">
+                    <h2><a href="MyPage.jsp">마이페이지</a></h2>
+                    <h2><a href="logoutAction.jsp">로그아웃</a></h2>
+                </div>
+                <%
+                	}
+                %>
             </div><!-- 로고 및 로그인 -->
-            <!-- 네비바 -->
-            <nav>
-                <!-- 네비바 박스 -->
-                <div class="nav-bar">
-                    <ul>
-                        <h1><a href="main.jsp">LOGO</a></h1>
-                    </div>
-                    <div class="login-box">
-                        <h2><a href="#"></a></h2>
-                        <h2><a href="login.jsp">로그인</a></h2>
-                    </div>
-                </div><!-- 로고 및 로그인 -->
                 <!-- 네비바 -->
                 <nav>
                     <!-- 네비바 박스 -->
@@ -64,7 +82,7 @@
                         </div>
                         <!-- 사용자이름 -->
                         <div class="userName">
-                            <p>ㅇㅇㅇ 님 안녕하세요</p>
+                            <p><%=userID %> 님 안녕하세요</p>
                         </div>
                     </div>
 
@@ -104,27 +122,27 @@
                             <table>
                                 <tr>
                                     <td class="t1">이름</td>
-                                    <td class="t2">ㅇㅇㅇ</td>
+                                    <td class="t2"><%=userDto.getUserName() %></td>
                                 </tr>
                                 <tr>
                                     <td class="t1">아이디</td>
-                                    <td class="t2">gogimukja</td>
+                                    <td class="t2"><%=userDto.getUserId() %></td>
                                 </tr>
                                 <tr>
                                     <td class="t1">비밀번호</td>
-                                    <td class="t2"><input type="password"><input type="button" value="비밀번호 변경하기"></td>
+                                    <td class="t2"><input type="password" name="userpw"><input type="button" value="비밀번호 변경하기"></td>
                                 </tr>
                                 <tr>
                                     <td class="t1">이메일</td>
-                                    <td class="t2"><input type="text" value="수정할 이메일을 입력해주세요."></td>
+                                    <td class="t2"><input type="email" name="useremail" value="수정할 이메일을 입력해주세요."></td>
                                 </tr>
                                 <tr>
                                     <td class="t1">휴대폰</td>
-                                    <td class="t2">010-0000-0000</td>
+                                    <td class="t2"><%=userDto.getUserPhone() %></td>
                                 </tr>
                                 <tr>
                                     <td class="t1">회원가입일</td>
-                                    <td class="t2">2022년 11월 11일</td>
+                                    <td class="t2"><%=userMDto.getUserDate() %></td>
                                 </tr>
                             </table>
                         </div>

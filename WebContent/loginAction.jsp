@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page import="java.io.PrintWriter" %>
+<%
+	request.setCharacterEncoding("UTF-8");
+%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -40,22 +43,30 @@
             </nav><!-- 네비바 -->
         </header><!-- 헤더(로고 및 로그인, 네비바) -->
 
-        <div class="main">
-            <div class="box-login">
-                <h1>LOGIN</h1>
-                <form method="post" action="loginAction.jsp">
-                    <!-- 이름 -->
-                    <label for="userid">아이디</label>
-                    <input type="text"userid="userName" required placeholder="아이디">
-                    <!-- 비밀번호 -->
-                    <label for="userpw">비밀번호</label>
-                    <input type="password" id="userid" placeholder="비밀번호" required>
-                    <button type="submit" >로그인</button>
-                </form>
-                <p class="p1">Not have an account?<a href="signUp.jsp"> 회원가입</a></p>
-                <p class="p1">Forgot PassWord?<a href="findpw1.jsp">비밀번호 찾기</a></p>
-            </div>
-        </div>
+<%
+	int ln = (int) request.getAttribute("ls");
+	if(ln == 0) {
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('비밀번호가 틀립니다.')");
+		script.println("history.back()");
+		script.println("</script>");
+	}
+	else if(ln == -1){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('존재하지 않는 아이디입니다.')");
+		script.println("history.back()");
+		script.println("</script>");
+	}
+	else if(ln == -2){
+		PrintWriter script = response.getWriter();
+		script.println("<script>");
+		script.println("alert('데이터베이스 오류가 발생했습니다.')");
+		script.println("history.back()");
+		script.println("</script>");
+	}
+%>
 
         <footer>
             <!-- 로고 -->

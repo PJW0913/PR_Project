@@ -45,27 +45,27 @@
                 <div class="box-signup">
                     <h1>회원가입</h1>
                     <!-- 회원가입 폼 -->
-                    <form action="">
+                    <form method="post" action="/PR_Project/join.do">
                         <!-- 아이디-->
                         <label for="userid">아이디</label>
-                        <input type="text" id="userid" required>
+                        <input type="text" id="userid" name="userid" required>
                         <!-- 비밀번호 -->
                         <label for="userpw">비밀번호</label>
-                        <input type="password" id="userpw" placeholder="6글자이상" required>
+                        <input type="password" id="userpw" name="userpw" placeholder="6글자이상" required>
                         <!-- 비밀번호 확인 -->
                         <label for="confirm_password">비밀번호 확인</label>
-                        <input type="password" id="confirm_password" required placeholder="6글자이상">
+                        <input type="password" id="confirm_password" name="confirm_userpw" required placeholder="6글자이상">
                         <!-- 이름-->
                         <label for="userName">이름</label>
-                        <input type="text" id="userName" required>
+                        <input type="text" id="userName" name="username" required>
                         <!-- 이메일 -->
                         <label for="userEmail">이메일</label>
-                        <input type="email" id="userEmail" required>
+                        <input type="email" id="userEmail" name="useremail" required>
                         <!-- 번호 -->
                         <label for="userNumber">핸드폰 번호</label>
-                        <input type="tel" id="userNumber" required>
+                        <input type="tel" id="userNumber" name="usernumber" required>
                         <!-- 회원가입 버튼 -->
-                        <button type="submit">회원가입</button>
+                        <button type="submit" >회원가입</button>
                     </form>
                     <!-- 로그인화면으로 -->
                     <p class="p1">이미 계정이 있으신가요?<a href="login.jsp">로그인화면</a></p>
@@ -96,5 +96,29 @@
             </div>
         </footer>
     </div><!--/container-->
+    
+    <script type="text/javascript">
+       var password = document.getElementById('userpw');
+       var confirm_password = document.getElementById('confirm_password');
+       
+       function validatePassword() {
+    	   if(password.value.length < 6 ){
+    		   password.setCustomValidity("6글자 이상 작성하세요");
+    	   }
+    	   else{
+    		   password.setCustomValidity("");
+    	   }
+    	   
+    	   if(password.value != confirm_password.value) {
+    		   confirm_password.setCustomValidity('비밀번호 불일치');
+    	   }
+    	   else {
+    		   confirm_password.setCustomValidity('');
+    	   }
+       }
+       
+       password.onchange = validatePassword;
+       confirm_password.onkeyup = validatePassword;
+    </script>
 </body>
 </html>

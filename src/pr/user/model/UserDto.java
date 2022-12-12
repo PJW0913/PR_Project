@@ -9,6 +9,19 @@ public class UserDto {
 	private String userEmail;
 	private String userPhone;
 	
+	//생성자
+	public UserDto() {
+		
+	}
+	
+	public UserDto(String userId, String userPassword, String userName, String userEmail, String userPhone) {
+		this.userId = userId;
+		this.userPassword = userPassword;
+		this.userName = userName;
+		this.userEmail  = userEmail;
+		this.userPhone = userPhone;
+	}
+	
 	//getter , setter
 	public String getUserId() {
 		return userId;
