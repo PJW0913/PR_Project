@@ -61,7 +61,7 @@
 
             
         <div class="board">
-            <div class="board_write">
+            <form class="board_write">
                 <div class="board_title">
                     <h1><strong>공지사항 글쓰기</strong></h1>
                 </div>
@@ -83,11 +83,11 @@
                         </div>
                     </div>
                     <div class="bottom-wrap">
-                        <a href="board.jsp" class="on">등록</a>
-                        <a href="board.jsp">취소</a>
+                        <input type="submit" value="등록">
+                        <input type="button" value="취소" onclick="location.href='board.jsp'">
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
         <footer>
             <!-- 로고 -->

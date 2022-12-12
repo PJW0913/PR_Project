@@ -88,7 +88,8 @@
     text-align: center;
 }
 
-.bottom-wrap a{
+.bottom-wrap input[type="submit"],
+.bottom-wrap input[type="button"] {
     font-family: 'SUIT-Medium';
     display: inline-block;
     min-width: 80px;
@@ -98,13 +99,16 @@
     margin-left: 30px;
 }
 
-.bottom-wrap a:first-child{
+.bottom-wrap input[type="submit"]:first-child,
+.bottom-wrap input[type="button"]:first-child {
     margin-left: 0;
 }
 
-.bottom-wrap a:hover{
+.bottom-wrap input[type="submit"]:hover,
+.bottom-wrap input[type="button"]:hover{
     border-color: black;
     background: black;
     color: #fff;
 }
+
 
