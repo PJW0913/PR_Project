@@ -66,11 +66,12 @@
                     <h1><strong>글쓰기</strong></h1>
                 </div>
                 <div class="board_write_wrap">
-                    <div class="write-wrap">
+                	<form>
+                		<div class="write-wrap">
                         <div class="title">
                             <dl>
                                 <dt>제목</dt>
-                                <dd><input type="text" placeholder="제목 입력"></dd>
+                                <dd><input type="text" name="bbsTitle" placeholder="제목 입력" maxlength="50"></dd>
                             </dl>
                         </div>
                         <div class="cont">
@@ -78,14 +79,15 @@
                                 <h2>내용</h2>
                             </div>
                             <div class="cont-right">
-                            <textarea placeholder="내용 입력"></textarea>
+                            <textarea name="bbsContent" maxlength="1500" placeholder="내용 입력 (1500자 이하)"></textarea>
                             </div>
                         </div>
-                    </div>
-                    <div class="bottom-wrap">
-                        <a href="board.jsp" class="on">등록</a>
-                        <a href="board.jsp">취소</a>
-                    </div>
+                    	</div>
+                    	<div class="bottom-wrap">
+                        	<a href="board.jsp" class="on">등록</a>
+                        	<a href="board.jsp">취소</a>
+                    	</div>
+                	</form>
                 </div>
             </div>
         </div>

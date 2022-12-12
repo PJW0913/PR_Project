@@ -42,7 +42,7 @@ public class UserController extends HttpServlet {
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		//설정
-		System.out.println("actionDo");
+		System.out.println("user actionDo");
 		String uri = request.getRequestURI();       // 프로젝트 + 파일경로   => ex) /jspbook/list.jsp
 		String conPath = request.getContextPath();  // 프로젝트 path만 가져옴  => ex) /jspbook
 		String command = uri.substring(conPath.length());
