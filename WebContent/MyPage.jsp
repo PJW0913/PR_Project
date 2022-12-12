@@ -121,11 +121,8 @@
                             	<input type="submit" value="확인" >
                         	</div>
                         </form>
-                        <!-- <div class="btn-verify">
-                            <input type="button" value="확인" >
-                        </div> -->
                     </div>
-                    <div id="unregister" class="tabcontent">
+                    <form id="unregister" class="tabcontent">
                         <h1>회원탈퇴</h1>
                         <!-- 안내 -->
                         <div class="text">
@@ -168,7 +165,7 @@
                             <table>
                                 <tr>
                                     <td class="t1">아이디</td>
-                                    <td class="t2">gogimukja</td>
+                                    <td class="t2"><%=userID %></td>
                                 </tr>
                                 <tr>
                                     <td class="t1">비밀번호</td>
@@ -176,10 +173,10 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="btn-verify">
-                            <input type="button" value="탈퇴하기" onclick="openLeave(), location.href='main.jsp'">
+                        <div class="btn-leave">
+                            <input type="submit" value="탈퇴하기">
                         </div>
-                    </div>
+                    </form>
 
                     <div id="mydata" class="tabcontent">
                         <h1>저장된 자료</h1>

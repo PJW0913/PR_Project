@@ -66,8 +66,7 @@
                     <h1><strong>글쓰기</strong></h1>
                 </div>
                 <div class="board_write_wrap">
-                	<form>
-                		<div class="write-wrap">
+                	<div class="write-wrap">
                         <div class="title">
                             <dl>
                                 <dt>제목</dt>
@@ -82,12 +81,11 @@
                             <textarea name="bbsContent" maxlength="1500" placeholder="내용 입력 (1500자 이하)"></textarea>
                             </div>
                         </div>
-                    	</div>
+                    </div>
                     	<div class="bottom-wrap">
                         	<input type="submit" value="등록">
-                        <input type="button" value="취소" onclick="location.href='board.jsp'">
+                        	<input type="button" value="취소" onclick="location.href='board.jsp'">
                     	</div>
-                	</form>
                 </div>
             </form>
         </div>

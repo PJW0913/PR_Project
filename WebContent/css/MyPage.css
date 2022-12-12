@@ -121,6 +121,7 @@ body {
     display: flex;
     flex-direction: row;
     line-height: 200px;
+    position: relative;
 }
 .mypage .mypageInfo .tabcontent .pwBox p {
     font-family: 'LINESeedKR-Bd';
@@ -135,8 +136,11 @@ body {
     text-align: center;
     margin-top: 2rem;
 }
-.mypage .mypageInfo .tabcontent .btn-verify input[type="button"] {
+.mypage .mypageInfo .tabcontent .btn-verify input[type="submit"] {
     padding: 1rem 5rem;
+    position:absolute;
+    top: 250px;
+    right: 490px;
     font-family: 'LINESeedKR-Bd';
 }
 
@@ -184,6 +188,14 @@ body {
     width: 15rem;
     height: 2rem;
 }
+.mypage .mypageInfo .tabcontent .btn-leave input[type="submit"] {
+    padding: 1rem 5rem;
+    position: absolute;
+    top: 700px;
+    right: 700px;
+    font-family: 'LINESeedKR-Bd';
+}
+
 
 /* 저장된 자료 영역 */
 .mypage .mypageInfo .tabcontent .backtestDataTitle h2,
