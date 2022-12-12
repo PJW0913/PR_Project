@@ -119,35 +119,37 @@
                         </div>
                         <!-- 개인정보 테이블 -->
                         <div class="infoTable">
-                            <table>
-                                <tr>
-                                    <td class="t1">이름</td>
-                                    <td class="t2"><%=userDto.getUserName() %></td>
-                                </tr>
-                                <tr>
-                                    <td class="t1">아이디</td>
-                                    <td class="t2"><%=userDto.getUserId() %></td>
-                                </tr>
-                                <tr>
-                                    <td class="t1">비밀번호</td>
-                                    <td class="t2"><input type="password" name="userpw"><input type="button" value="비밀번호 변경하기"></td>
-                                </tr>
-                                <tr>
-                                    <td class="t1">이메일</td>
-                                    <td class="t2"><input type="email" name="useremail" value="수정할 이메일을 입력해주세요."></td>
-                                </tr>
-                                <tr>
-                                    <td class="t1">휴대폰</td>
-                                    <td class="t2"><%=userDto.getUserPhone() %></td>
-                                </tr>
-                                <tr>
-                                    <td class="t1">회원가입일</td>
-                                    <td class="t2"><%=userMDto.getUserDate() %></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="btn-verify">
-                            <input type="button" value="확인" onclick="openVerify(), location.href='Myapge.jsp'">
+                        	<form method="post" action="/PR_Project/editMyPrivacy.do">
+                        		<table>
+                                	<tr>
+                                    	<td class="t1">이름</td>
+                                    	<td class="t2"><%=userDto.getUserName() %></td>
+                                	</tr>
+                                	<tr>
+                                   	 	<td class="t1">아이디</td>
+                                    	<td class="t2"><%=userID %></td>
+                                	</tr>
+                               		 <tr>
+                                   		<td class="t1">비밀번호</td>
+                                    	<td class="t2"><input type="password" name="userpw"><input type="button" value="비밀번호 변경하기"></td>
+                                	</tr>
+                                	<tr>
+                                    	<td class="t1">이메일</td>
+                                    	<td class="t2"><input type="email" name="useremail" value="수정할 이메일을 입력해주세요."></td>
+                                	</tr>
+                                	<tr>
+                                   	 	<td class="t1">휴대폰</td>
+                                    	<td class="t2"><%=userDto.getUserPhone() %></td>
+                                	</tr>
+                                	<tr>
+                                    	<td class="t1">회원가입일</td>
+                                    	<td class="t2"><%=userMDto.getUserDate() %></td>
+                                	</tr>
+                            	</table>
+                            	 <div class="btn-verify">
+                           			<input type="submit" value="확인" >
+                        		</div>
+                        	</form>
                         </div>
                     </div>
                     <div id="unregister" class="tabcontent">

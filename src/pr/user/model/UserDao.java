@@ -218,6 +218,29 @@ public class UserDao {
 		return userMDto;
 	}
 	
+	//회원정보 수정 메소드 (비밀번호, 이메일)
+	public int editDB(String userid, UserDto userDto) {
+		connect();
+		
+		String sql = "update userinfo set userpw=?, useremail=? where userid=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, userDto.getUserPassword());
+			pstmt.setString(2, userDto.getUserEmail());
+			pstmt.setString(3, userid);
+			pstmt.executeUpdate(); 
+			return 1;
+		}
+		catch(SQLException e) {
+			e.printStackTrace();
+		}
+		finally {
+			disconnect();
+		}
+		return 0;
+	}
+	
 	
 
 }

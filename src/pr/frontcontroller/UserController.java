@@ -166,6 +166,43 @@ public class UserController extends HttpServlet {
 			}
 		}
 		
+		//개인정보 수정
+		if(command.equals("/editMyPrivacy.do")){
+			System.out.println("editMyPrivacy 입니다.");
+			
+			HttpSession session = request.getSession();
+			
+			String userid = (String) session.getAttribute("userid");
+			
+			UserDao userDao = UserDao.getInstance();
+			UserDto userDto = userDao.getDB(userid);
+			
+			userDto.setUserPassword(request.getParameter("userpw"));
+			userDto.setUserEmail(request.getParameter("useremail"));
+			
+			request.setAttribute("userDto", userDto);
+			request.setAttribute("userid", userid);
+			
+			
+			EditUserPrivacyService editUserPrivacyService = new EditUserPrivacyServiceImpl();
+			int eups = editUserPrivacyService.execute(request, response);
+			System.out.println(eups);
+			
+			// 수정 실패
+			if(eups == 0) {
+				request.setAttribute("eups", eups);
+				response.sendRedirect("/PR_Project/MyPagePersonalInfo.jsp");
+			}
+			//수정 성공
+			else {
+				session.setAttribute("userid", userid);
+				session.setAttribute("userDto", userDto);
+				RequestDispatcher requestDispatcher = request.getRequestDispatcher("/MyPage.jsp");  
+				requestDispatcher.forward(request, response);
+			}
+			
+		}
+		
 		
 	}
 

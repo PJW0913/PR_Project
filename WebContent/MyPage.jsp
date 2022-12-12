@@ -117,10 +117,13 @@
                             <div class="pwInput">
                                 <input type="password" name="userpw">
                             </div>
+                            <div class="btn-verify">
+                            	<input type="submit" value="확인" >
+                        	</div>
                         </form>
-                        <div class="btn-verify">
+                        <!-- <div class="btn-verify">
                             <input type="button" value="확인" >
-                        </div>
+                        </div> -->
                     </div>
                     <div id="unregister" class="tabcontent">
                         <h1>회원탈퇴</h1>
