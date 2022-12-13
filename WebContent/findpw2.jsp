@@ -43,17 +43,11 @@
         <div class="main">
             <div class="box-find-pw">
                 <h1><a href="login.jsp">비밀번호 찾기</a></h1>
-                <h4>찾을 방법을 선택해주세요.</h4>
-                <form action="" class="find-pw">
-                    <div class="radio-1">
-                        <input type="radio" id="r_p1" class="input_rd" name="how-find" required>
-                        <label for="r_p1">휴대전화로 찾기</label>
-                    </div>
-                    <div class="radio-1">
-                        <input type="radio" id="r_p2" class="input_rd" name="how-find" required>
-                        <label for="r_p2">이메일로 찾기</label>
-                    </div>
-                    <button type="submit">보내기</button>
+                <h4>재설정할 비밀번호를 입력해주세요.</h4>
+                <form method="post" action="/PR_Project/changePw.do" class="find-pw">
+                    <input type="password" id="userNewPw1" name="userNewPw1" required placeholder="새로운 비밀번호 입력">
+                    <input type="password" id="userNewPw2" name="userNewPw2" required placeholder="비밀번호 재입력">
+                    <button type="submit" id="confirm_newPw">확인</button>
                 </form>
             </div>
         </div>
@@ -82,5 +76,27 @@
             </div>
         </footer>
     </div><!--/container-->
+   <script type="text/javascript">
+      var newPassword1 = document.getElementById('userNewPw1');
+      var newPassword2 = document.getElementById('userNewPw2');
+//       var confirm_newPassword = document.getElementById('confirm_newPw');
+      
+      function matchPassword() {
+         if(newPassword1.value.length < 6){
+            newPassword1.setCustomValidity("6글자 이상 작성하세요");
+         }else {
+            newPassword1.setCustomValidity("");
+         }
+         
+         if(newPassword1.value != newPassword2.value) {
+            newPassword2.setCustomValidity('비밀번호 불일치');
+         }else {
+            newPassword2.setCustomValidity("");
+         }
+      }
+      
+      newPassword1.onchange = matchPassword;
+      newPassword2.onkeyup = matchPassword;
+   </script>
 </body>
 </html>

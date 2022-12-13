@@ -1,6 +1,6 @@
 .main {
     margin-top: 120px;
-    padding: 15.6rem 0;
+    padding: 13.4rem 0;
 }
 body {
     height: auto;;
@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 360px;
-    height: 245px;
+    height: 315px;
     background-color: white;
     margin: auto;
     border: 1px solid rgb(229,229,229)

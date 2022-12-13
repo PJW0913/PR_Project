@@ -1,16 +1,22 @@
 package pr.frontcontroller;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import pr.service.BoardWriteService;
+import pr.service.BoardWriteServiceImpl;
 
 /**
  * Servlet implementation class BoardController
  */
-@WebServlet("/Board.do")
+@WebServlet("*.board")
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -42,7 +48,26 @@ public class BoardController extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html:charset=utf-8");
 		
-		//공지사항 리스트
+		//공지사항 글쓰기
+		if(command.equals("/write.board")) {
+			System.out.println("write입니다.");
+			HttpSession session = request.getSession();
+			
+			String userid = (String) session.getAttribute("userid");
+			String bbsTitle = request.getParameter("bbsTitle");
+			String bbsContent = request.getParameter("bbsContent");
+			
+			request.setAttribute("userid", userid);
+			request.setAttribute("bbsTitle", bbsTitle);
+			request.setAttribute("bbsContent", bbsContent);
+			
+			BoardWriteService boardWriteService = new BoardWriteServiceImpl();
+			int bws = boardWriteService.execute(request, response);
+			System.out.println(bws);
+			request.setAttribute("bws", bws);
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("/boardWriteAction.jsp");  
+			requestDispatcher.forward(request, response);
+			}
 		
 	}
 

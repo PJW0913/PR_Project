@@ -61,7 +61,7 @@
 
             
         <div class="board">
-            <form class="board_write">
+            <form class="board_write" method="post" action="/PR_Project/write.board">
                 <div class="board_title">
                     <h1><strong>글쓰기</strong></h1>
                 </div>

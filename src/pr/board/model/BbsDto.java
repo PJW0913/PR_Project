@@ -1,4 +1,4 @@
-package pr.user.model;
+package pr.board.model;
 
 public class BbsDto {
 	

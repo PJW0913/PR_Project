@@ -41,24 +41,32 @@ public class UserDao {
 	}
 	
 	//데이터베이스 연결 끊기 메소드
-	void disconnect() {
-		if(pstmt != null) {
-			try {
-				pstmt.close();
+		void disconnect() {
+			if(pstmt != null) {
+				try {
+					pstmt.close();
+				}
+				catch(SQLException e) {
+					e.printStackTrace();
+				}
 			}
-			catch(SQLException e) {
-				e.printStackTrace();
+			if(conn != null) {
+				try {
+					conn.close();
+				}
+				catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if(rs != null) {
+				try {
+					rs.close();
+				}
+				catch(SQLException e) {
+					e.printStackTrace();
+				}
 			}
 		}
-		if(conn != null) {
-			try {
-				conn.close();
-			}
-			catch(SQLException e) {
-				e.printStackTrace();
-			}
-		}
-	}
 	
 	//로그인 메소드
 	public int loginDB(String userId, String userPassword) {
@@ -147,7 +155,6 @@ public class UserDao {
 				if(userPw.equals(rs.getString("userpw"))) {
 					return 1;
 				}
-				rs.close();
 			}
 		}
 		catch(SQLException e) {
@@ -240,6 +247,57 @@ public class UserDao {
 		}
 		return 0;
 	}
+	
+	   //비밀번호 찾기 정보 입력메소드 (이름, 아이디 확인)
+	   public int checkIdNameDB(String userId, String userName) {
+	      connect();
+	      
+	      String sql = "SELECT USERNAME from USERINFO where USERID=?";
+	      
+	      try {
+	         pstmt = conn.prepareStatement(sql);
+	         pstmt.setString(1, userId);
+	         rs = pstmt.executeQuery();
+	         
+	         if(rs.next()) {
+	            if(rs.getString(1).equals(userName)) {
+	               return 1; //입력정보 일치
+	            } else {
+	               return 0; //이름 불일치
+	            }
+	         }
+	         return -1; //아이디 없음
+	      }
+	      catch(SQLException e) {
+	         e.printStackTrace();
+	      }
+	      finally {
+	         disconnect();
+	      }
+	      return -2; //데이터베이스 오류
+	   }
+	   
+	   //비밀번호 재설정 메서드
+	   public int changePw(String userNewPw1, String userId) {
+	      connect();
+	      
+	      String sql = "UPDATE USERINFO SET USERPW=? WHERE USERID=?";
+	      
+	         try {
+	            pstmt = conn.prepareStatement(sql);
+	            pstmt.setString(1, userNewPw1);
+	            pstmt.setString(2, userId);            
+	            pstmt.executeUpdate();
+	            return 1;
+	         }
+	         catch(SQLException e) {
+	            e.printStackTrace();
+	         }
+	         finally {
+	            disconnect();
+	         }
+	      return 0; //비밀번호 재입력 불일치
+	   }
 	
 	
 

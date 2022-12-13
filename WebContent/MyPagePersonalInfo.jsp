@@ -131,11 +131,11 @@
                                 	</tr>
                                		 <tr>
                                    		<td class="t1">비밀번호</td>
-                                    	<td class="t2"><input type="password" placeholder="수정할 비밀번호를 입력해주세요."></td>
+                                    	<td class="t2"><input type="password" name="userpw" placeholder="수정할 비밀번호를 입력해주세요."></td>
                                 	</tr>
                                 	<tr>
                                     	<td class="t1">이메일</td>
-                                    	<td class="t2"><input type="text" placeholder="수정할 이메일을 입력해주세요."></td>
+                                    	<td class="t2"><input type="text" name="useremail" placeholder="수정할 이메일을 입력해주세요."></td>
                                 	</tr>
                                 	<tr>
                                    	 	<td class="t1">휴대폰</td>

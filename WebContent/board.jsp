@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="pr.board.model.*" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,10 @@
 	String userID = null;
 	if (session.getAttribute("userid") != null){
 		userID = (String) session.getAttribute("userid");
+	}
+	int pageNumber = 1;
+	if(request.getParameter("pageNumber") != null) {
+		pageNumber = Integer.parseInt(request.getParameter("pageNumber")); 
 	}
 %>
     <div id="container">
@@ -137,14 +142,22 @@
                         </div>
                         <!-- 내용부분 -->
                         <div class="board_list_body">
+                            	<%
+                        			BbsDao bbsDao = BbsDao.getInstance();
+                        			ArrayList<BbsDto> list = bbsDao.getList(pageNumber);
+                        			for(int i=0; i<list.size(); i++) {
+                       			%>
                             <div class="item">
-                                <div class="num">1</div>
-                                <div class="tit"><a href="boardView.jsp">게시글 제목입니다.</a></div>
-                                <div class="writer">사용자 1</div>
-                                <div class="date">2019-11-20</div>
-                                <div class="view">111</div>
+                        		<div class="num"><%=list.get(i).getBbsId()%></div>
+                                <div class="tit"><a href="boardViewNotice.jsp"><%=list.get(i).getBbsTitle() %></a></div>
+                                <div class="writer"><%=list.get(i).getUserId() %></div>
+                                <div class="date"><%=list.get(i).getBbsDate().substring(0, 11) %></div>
+                                <div class="view"><%=list.get(i).getViewcnt() %></div>
                             </div>
-                            <div class="item">
+                        	<% 		
+                        		}
+                        	%>
+                           <!--  <div class="item">
                                 <div class="num">2</div>
                                 <div class="tit"><a href="boardView.jsp">게시글 제목입니다.</a></div>
                                 <div class="writer">사용자 2</div>
@@ -206,7 +219,7 @@
                                 <div class="writer">사용자 10</div>
                                 <div class="date">2019-11-20</div>
                                 <div class="view">111</div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="paging"> 
                             <a href="#" class="bt first "><<</a>

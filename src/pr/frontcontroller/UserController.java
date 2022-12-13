@@ -203,6 +203,71 @@ public class UserController extends HttpServlet {
 			
 		}
 		
+	      //비밀번호 찾기 1(이름, 아이디)
+	      if(command.equals("/findpw.do")) {
+	         System.out.println("findpw 입니다.");
+	         
+	         String userId = request.getParameter("userId");
+	         String userName = request.getParameter("userName");
+	         
+	         request.setAttribute("userId", userId);
+	         request.setAttribute("userName", userName);
+	         
+	         CheckIdNameService checkidNameService = new CheckIdNameServiceImpl();
+	         int nis = checkidNameService.execute(request, response);
+	         
+	         //이름 일치
+	         if(nis == 1) {
+	            System.out.println("입력정보 일치");
+	            //회원정보 
+	            HttpSession session = request.getSession();
+	            session.setAttribute("userId", userId);
+	            
+	            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/findpw2.jsp");  
+	            requestDispatcher.forward(request, response);
+	            
+	         }
+	         //이름 불일치
+	         else {
+	            System.out.println("입력정보 불일치");
+	            System.out.println(nis);
+	            request.setAttribute("nis", nis);
+	            response.sendRedirect("/PR_Project/findpw1.jsp");
+	         }
+	      }
+	      
+	      //비밀번호 재설정
+	      if(command.equals("/changePw.do")){
+	         System.out.println("ChangePw 입니다.");
+	         HttpSession session = request.getSession();
+	         
+	         String userId = (String) session.getAttribute("userId");
+	         String userNewPw1 = request.getParameter("userNewPw1");
+	         
+	         
+	         request.setAttribute("userId", userId);
+	         request.setAttribute("userNewPw1", userNewPw1);
+	         
+	         
+	         ChangePwService changePwService = new ChangePwServiceImpl();
+	         int cps = changePwService.execute(request, response);
+	         System.out.println(cps);
+	         
+	         // 수정 실패
+	         if(cps == 0) {
+	            System.out.println("비밀번호 수정 실패");
+	            request.setAttribute("cps", cps);
+	            response.sendRedirect("/PR_Project/findpw2.jsp");
+	         }
+	         //수정 성공
+	         else {
+	            System.out.println("비밀번호 수정 완료");
+	            request.setAttribute("cps", cps);
+	            response.sendRedirect("/PR_Project/main.jsp");
+	         }
+	         
+	      }
+		
 		
 	}
 

@@ -1,6 +1,6 @@
 .main {
     margin-top: 120px;
-    padding: 14.8rem 0;
+    padding: 13.4rem 0;
 }
 body {
     height: auto;
@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 360px;
-    height: 270px;
+    height: 315px;
     background-color: white;
     margin: auto;
     border: 1px solid rgb(229,229,229)
@@ -20,11 +20,6 @@ body {
     font-family: 'LINESeedKR-Bd';
     text-align: center;
     padding-top: 15px;
-    padding-bottom: 20px;
-}
-
-.box-find-pw h1 a{
-    text-decoration: none;
 }
 
 .box-find-pw h4 {
@@ -32,27 +27,27 @@ body {
     padding-top: 10px;
 }
 
-.find-pw {
-    margin-top: 10px;
-    height: 130px;
+.box-find-pw form {
+    font-family: 'SUIT-Medium';
     width: 300px;
-    margin-left: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin-left: 20px;
 }
 
-.radio-1 {
-    padding-left: 30px;
-    margin-left: 40px;
-    margin-top: 5px;
+.box-find-pw form input {
+    height: 2.5rem;
+    width: 100%;
+    padding: 7px;
+    margin-top: 20px;
+    border: none;
+    border: 1px solid #999;
+    outline: none;
 }
 
 .box-find-pw form button[type="submit"] {
     font-family: 'SUIT-Medium';
     width: 300px;
     height: 45px;
-    margin-top: 20px;
+    margin-top: 40px;
     color: black;
     font-size: 18px;
     cursor: pointer;
